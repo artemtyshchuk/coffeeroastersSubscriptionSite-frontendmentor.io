@@ -1,25 +1,22 @@
+import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import bean from "assets/home/desktop/icon-coffee-bean.svg";
-import { useEffect, useState } from "react";
-import { HamburgerMenu } from "./HamburgerMenu";
+import { HamburgerMenu, HamburgerMenuIcon } from "./HamburgerMenu";
 
 interface HeaderProps {}
 
 export const Header = ({}: HeaderProps) => {
   const [hamburgerMenuOpen, setHamburgerMenuOpen] = useState(false);
-  const [mobileScreenSize, setMobileScreenSize] = useState({
-    mobile: window.matchMedia("(max-width: 768px)").matches,
-  });
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 768px)").matches
+  );
 
   useEffect(() => {
     const handleResize = () => {
-      setMobileScreenSize({
-        mobile: window.matchMedia("(max-width: 768px)").matches,
-      });
+      setIsMobile(window.matchMedia("(max-width: 768px)").matches);
     };
 
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
@@ -37,20 +34,15 @@ export const Header = ({}: HeaderProps) => {
         </div>
       </div>
 
-      {mobileScreenSize.mobile && (
-        <div
-          className={`${styles.hamburger} ${
-            hamburgerMenuOpen ? styles.open : ""
-          }`}
-          onClick={() => setHamburgerMenuOpen(!hamburgerMenuOpen)}
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+      {isMobile && (
+        <HamburgerMenuIcon
+          hamburgerMenuOpen={hamburgerMenuOpen}
+          setHamburgerMenuOpen={setHamburgerMenuOpen}
+        />
       )}
 
       {hamburgerMenuOpen && <HamburgerMenu />}
+
       <div className={styles.buttonsContainer}>
         <button className={styles.headerButton}>Home</button>
         <button className={styles.headerButton}>About us</button>
