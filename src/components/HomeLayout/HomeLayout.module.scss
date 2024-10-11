@@ -1,0 +1,274 @@
+.firstContainer {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  padding: 100px 86px;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/home/desktop/image-hero-coffeepress.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.firstBlockTitle {
+  margin: 0;
+  color: #fefcf7;
+  font-family: "Fraunces 9pt";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px; /* 100% */
+  grid-column: 1/2;
+}
+
+.firstBlockDescr {
+  padding-top: 32px;
+  margin: 0;
+  color: #fefcf7;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  grid-column: 1/2;
+}
+
+.secondContainer {
+  margin-top: 10%;
+  width: 100%;
+}
+
+.secondBlockTitleContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.secondBlockTitle {
+  margin: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(131, 136, 143, 1) 10%,
+    rgba(131, 136, 143, 0) 87%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 166px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 20px;
+  word-spacing: 10px;
+  display: inline-block;
+}
+
+.coffeCollectionContainer {
+  position: relative;
+  bottom: 73px;
+  display: grid;
+  grid-template-columns: repeat(4, 24%);
+  column-gap: 30px;
+  box-sizing: border-box;
+}
+
+.coffeImgContainer {
+  height: 259px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.coffeTitle {
+  margin: 0;
+  margin-top: 10%;
+  color: #333d4b;
+  text-align: center;
+  font-family: "Fraunces 9pt";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px; /* 133.333% */
+}
+
+.coffeDescr {
+  padding-top: 24px;
+  margin: 0;
+  color: #333d4b;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.thirdContainer {
+  padding: 105px 85px;
+  height: 40%;
+  background-color: #2c343e;
+  border-radius: 10px;
+  position: relative;
+  justify-items: center;
+}
+
+.thirdBlockTitleContainer {
+  margin: 0 auto;
+  display: flex;
+  width: 45%;
+  height: 300px;
+  justify-content: start;
+  flex-direction: column;
+}
+
+.thirdBlockTitle {
+  margin: 0;
+  color: #fefcf7;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px; /* 120% */
+}
+
+.thirdBlockDescr {
+  margin: 0;
+  color: #fefcf7;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.whyUsBlocksContainer {
+  padding: 0 85px;
+  position: absolute;
+  top: 270px;
+  left: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  column-gap: 30px;
+  box-sizing: border-box;
+}
+
+.whyUsBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 48px 48px 48px;
+  border-radius: 8px;
+  background: #0e8784;
+}
+
+.whyUsBlockTitle {
+  margin: 0;
+  padding-top: 56px;
+  color: #fefcf7;
+  text-align: center;
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px; /* 133.333% */
+}
+
+.whyUsBlockDescr {
+  margin: 0;
+  padding-top: 24px;
+  color: #fefcf7;
+  text-align: center;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
+
+.fourthContainer {
+  margin: 20% 85px 0 85px;
+}
+
+.fourthBlockTitle {
+  margin: 0;
+  color: #83888f;
+  font-family: "Fraunces 9pt";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px; /* 133.333% */
+}
+
+.lineContainer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 72%;
+}
+
+.oval {
+  display: block;
+  width: 35px;
+  height: 31px;
+  border: 2px solid #0e8784;
+  border-radius: 100%;
+}
+
+.line {
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: #fdd6ba;
+}
+
+.stepsContainer {
+  margin-top: 67px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+
+.step {
+  width: 80%;
+}
+
+.stepNumber {
+  margin: 0;
+  color: #fdd6ba;
+  font-family: "Fraunces";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px; /* 100% */
+}
+
+.stepTitle {
+  padding-top: 38px;
+  margin: 0;
+  color: #333d4b;
+  font-family: "Fraunces";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px; /* 112.5% */
+}
+
+.stepDescr {
+  padding-top: 42px;
+  margin: 0;
+  color: #333d4b;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}
