@@ -1,15 +1,45 @@
 import { Container } from "components/Container";
+import { Footer } from "components/Footer";
 import { Header } from "components/Header";
+import { AboutUsPage } from "pages/AboutUsPage";
+import { CreatePlanPage } from "pages/CreatePlanPage";
 import { HomePage } from "pages/HomePage";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <>
+          <Container>
+            <Header />
+            <Outlet />
+          </Container>
+          <Footer />
+        </>
+      ),
+      children: [
+        {
+          path: "/",
+          element: <HomePage />,
+        },
+        {
+          path: "/about-us",
+          element: <AboutUsPage />,
+        },
+        {
+          path: "/create-your-plan",
+          element: <CreatePlanPage />,
+        },
+      ],
+    },
+  ]);
+
   return (
-    <div className="App">
-      <Container>
-        <Header />
-        <HomePage />
-      </Container>
-    </div>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 

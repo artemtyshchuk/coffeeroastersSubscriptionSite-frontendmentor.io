@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import bean from "assets/home/desktop/icon-coffee-bean.svg";
 import { HamburgerMenu, HamburgerMenuIcon } from "./HamburgerMenu";
+import { Logo } from "components/Logo";
+import { NavButtons } from "components/Buttons/NavButtons/NavButtons";
 
 interface HeaderProps {}
 
@@ -22,17 +24,7 @@ export const Header = ({}: HeaderProps) => {
 
   return (
     <div className={styles.header}>
-      <div className={styles.logoContainer}>
-        <div className={styles.firstBean}>
-          <img src={bean} alt="bean" />
-        </div>
-        <div className={styles.secondBean}>
-          <img src={bean} alt="bean" />
-        </div>
-        <div className={styles.titleContainer}>
-          <h1 className={styles.logoTitle}>coffeeroasters</h1>
-        </div>
-      </div>
+      <Logo />
 
       {isMobile && (
         <HamburgerMenuIcon
@@ -43,11 +35,7 @@ export const Header = ({}: HeaderProps) => {
 
       {hamburgerMenuOpen && <HamburgerMenu />}
 
-      <div className={styles.buttonsContainer}>
-        <button className={styles.headerButton}>Home</button>
-        <button className={styles.headerButton}>About us</button>
-        <button className={styles.headerButton}>Create your plan</button>
-      </div>
+      <NavButtons hoverColor="#333d4b" defaultColor="#83888f" />
     </div>
   );
 };
