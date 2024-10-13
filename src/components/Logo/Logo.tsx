@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import styles from "./Logo.module.scss";
 import bean from "assets/home/desktop/icon-coffee-bean.svg";
 
@@ -7,8 +8,11 @@ interface LogoProps {
 }
 
 export const Logo = ({beanStyle, titleStyle}: LogoProps) => {
+
+  const navigate = useNavigate();
+
   return (
-    <div className={styles.logoContainer}>
+    <div className={styles.logoContainer} onClick={() => navigate("/") }>
         <div className={styles.firstBean}>
           <img src={bean} alt="bean" />
         </div>

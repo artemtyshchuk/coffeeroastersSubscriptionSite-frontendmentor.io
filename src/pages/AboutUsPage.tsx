@@ -1,7 +1,9 @@
+import { AboutUsLayout } from "components/AboutUsLayout";
+
 export const AboutUsPage = () => {
   return (
-    <div>
-      <h1>About Us</h1>
-    </div>
+    <>
+      <AboutUsLayout />
+    </>
   );
 };

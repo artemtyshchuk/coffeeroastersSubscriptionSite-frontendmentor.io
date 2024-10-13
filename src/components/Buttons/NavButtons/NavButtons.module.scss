@@ -19,28 +19,8 @@
   transition: color 0.3s ease;
 }
 
-/* Более специфичные селекторы */
-.headerButton {
-  border: none;
-  background-color: transparent;
-  color: #83888f;
-  font-family: Barlow;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: 0.923px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.footerHover:hover {
-  color: #fff !important;
-}
-
-.headerHover:hover {
-  color: #333d4b !important;
+.headerButtonActive {
+  color: #333d4b;
 }
 
 @media (max-width: 768px) {

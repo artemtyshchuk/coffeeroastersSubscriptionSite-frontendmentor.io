@@ -6,9 +6,7 @@ import { ReactComponent as TwitterIcon } from "assets/shared/desktop/icon-twitte
 import { ReactComponent as FacebookIcon } from "assets/shared/desktop/icon-facebook.svg";
 import { ReactComponent as InstagramIcon } from "assets/shared/desktop/icon-instagram.svg";
 
-interface FooterProps {}
-
-export const Footer = ({}: FooterProps) => {
+export const Footer = () => {
   return (
     <div className={styles.footer}>
       <Logo
@@ -16,17 +14,17 @@ export const Footer = ({}: FooterProps) => {
         titleStyle={{ color: "#fff", fontSize: "28px" }}
       />
 
-      <NavButtons hoverColor="#fff" defaultColor="#83888f" />
+      <NavButtons hoverColor="#fff" />
 
       <div className={styles.socialMediaContainer}>
         <a href="https://pl-pl.facebook.com/" target="_blank">
-          <FacebookIcon className={styles.footerSocialIcon}/>
+          <FacebookIcon className={styles.footerSocialIcon} />
         </a>
         <a href="https://x.com/home" target="_blank">
-          <TwitterIcon className={styles.footerSocialIcon}/>
+          <TwitterIcon className={styles.footerSocialIcon} />
         </a>
         <a href="https://www.instagram.com/" target="_blank">
-          <InstagramIcon className={styles.footerSocialIcon}/>
+          <InstagramIcon className={styles.footerSocialIcon} />
         </a>
       </div>
     </div>
