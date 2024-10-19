@@ -1,7 +1,9 @@
+import { CreateYourPlan } from "components/CreateYourPlan";
+
 export const CreatePlanPage = () => {
   return (
-    <div>
-      <h1>Create Plan</h1>
-    </div>
+    <>
+      <CreateYourPlan />
+    </>
   );
 };
