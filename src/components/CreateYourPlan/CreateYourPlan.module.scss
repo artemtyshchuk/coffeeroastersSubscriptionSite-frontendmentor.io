@@ -120,9 +120,13 @@
 }
 
 .formSteps {
+  position: sticky;
+  top: 50px;
+  align-self: flex-start;
   display: flex;
   flex-direction: column;
   grid-row: 1/5;
+  margin-bottom: 8%;
 }
 
 .formStepTitle {
@@ -132,10 +136,11 @@
   font-style: normal;
   font-weight: 900;
   line-height: 32px; /* 133.333% */
+  cursor: pointer;
 }
 
 .formStepNumber {
-  margin-right: 27px;
+  margin-right: 29px;
   color: #d5d5d4;
   font-family: "Fraunces";
   font-size: 24px;
@@ -218,4 +223,41 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+.orderSummaryContainer {
+  margin-top: 84px;
+  padding: 48px;
+  background-color: #2c343e;
+  border-radius: 10px;
+  grid-column: 2/3;
+}
+
+.orderSummaryTitle {
+  margin: 0;
+  color: #fff;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  text-transform: uppercase;
+  opacity: 0.5037;
+}
+
+.orderSummaryDescr {
+  padding-top: 8px;
+  margin: 0;
+  color: #fff;
+  font-family: "Fraunces";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px; /* 166.667% */
+}
+
+.createYourPlanButton {
+  display: flex;
+  justify-content: end;
+  grid-column: 2/3;
 }

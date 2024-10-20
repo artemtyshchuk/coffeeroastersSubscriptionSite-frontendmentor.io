@@ -1,0 +1,85 @@
+.modalCheckout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalCheckoutBlock {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 540px;
+  background-color: #fefcf7;
+  border-radius: 8px;
+}
+
+.modalHeaderContainer {
+  padding: 48px 56px;
+  width: 100%;
+  background-color: #2c343e;
+  box-sizing: border-box;
+}
+
+.modalHeader {
+  margin: 0;
+  color: #fff;
+  font-family: "Fraunces 9pt";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px; /* 120% */
+}
+
+.modalContentContainer {
+  padding: 56px;
+  background-color: #fff;
+}
+
+.modalContent {
+  margin: 0;
+  color: #83888f;
+  font-family: "Fraunces 9pt";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px; /* 166.667% */
+}
+
+.modalDescr {
+  padding-top: 7px;
+  margin: 0;
+  color: #333d4b;
+  font-family: Barlow;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+  opacity: 0.8;
+}
+
+.modalFooter {
+  margin-top: 47px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finalPrice {
+  margin: 0;
+  color: #333d4b;
+  font-family: "Fraunces 9pt";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px; /* 112.5% */
+}

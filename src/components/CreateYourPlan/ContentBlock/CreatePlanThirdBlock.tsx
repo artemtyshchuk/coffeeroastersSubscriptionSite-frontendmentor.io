@@ -2,12 +2,15 @@ import { useState } from "react";
 import styles from "../CreateYourPlan.module.scss";
 import { FormSteps } from "./FormSteps";
 import { FormOptions } from "./FormOptions";
+import { CreateYourPlanButton } from "components/Buttons/CreateYourPlanButton/CreateYourPlanButton";
+import { ModalCheckout } from "components/ModalCheckout";
 
 export const CreatePlanThirdBlock = () => {
   const [activeStep, setActiveStep] = useState<number | null>(null);
   const [openQuestions, setOpenQuestions] = useState<{
     [key: number]: boolean;
   }>({});
+  const [modalOpen, setModalOpen] = useState(false);
 
   const handleStepClick = (stepIndex: number) => {
     if (activeStep === stepIndex) {
@@ -29,38 +32,40 @@ export const CreatePlanThirdBlock = () => {
   return (
     <div className={styles.thirdBlock}>
       <div className={styles.formSteps}>
+        <div className={styles.stickSlide}></div>
+
         <FormSteps
           number="01"
           title="Preference"
           divider
-          isActive={activeStep === 0}
+          isActive={openQuestions[0] || false}
           onClick={() => handleStepClick(0)}
         />
         <FormSteps
           number="02"
           title="Bean Type"
           divider
-          isActive={activeStep === 1}
+          isActive={openQuestions[1] || false}
           onClick={() => handleStepClick(1)}
         />
         <FormSteps
           number="03"
           title="Quantity"
           divider
-          isActive={activeStep === 2}
+          isActive={openQuestions[2] || false}
           onClick={() => handleStepClick(2)}
         />
         <FormSteps
           number="04"
           title="Grind Option"
           divider
-          isActive={activeStep === 3}
+          isActive={openQuestions[3] || false}
           onClick={() => handleStepClick(3)}
         />
         <FormSteps
           number="05"
           title="Deliveries"
-          isActive={activeStep === 4}
+          isActive={openQuestions[4] || false}
           onClick={() => handleStepClick(4)}
         />
       </div>
@@ -95,6 +100,25 @@ export const CreatePlanThirdBlock = () => {
         id="form-question-4"
         handleOpen={() => toggleQuestion(4)}
       />
+
+      <div className={styles.orderSummaryContainer}>
+        <p className={styles.orderSummaryTitle}>Order Summary</p>
+        <p className={styles.orderSummaryDescr}>
+          “I drink my coffee using Capsules, with a _____ type of bean. _____ ,
+          sent to me _____.”
+        </p>
+      </div>
+
+      <div className={styles.createYourPlanButton}>
+        <CreateYourPlanButton
+          backgroundColor="#E2DEDB"
+          onClick={() => setModalOpen(true)}
+          marginTop="40px"
+          buttonText="Create My Plan!"
+        />
+      </div>
+
+      {modalOpen && <ModalCheckout />}
     </div>
   );
 };

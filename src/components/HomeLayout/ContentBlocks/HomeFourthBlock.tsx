@@ -1,7 +1,10 @@
 import { CreateYourPlanButton } from "components/Buttons/CreateYourPlanButton/CreateYourPlanButton";
 import styles from "../HomeLayout.module.scss";
+import { useNavigate } from "react-router";
 
 export const HomeFourthBlock = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.fourthContainer}>
       <p className={styles.fourthBlockTitle}>How it works</p>
@@ -46,7 +49,12 @@ export const HomeFourthBlock = () => {
           </p>
         </div>
       </div>
-      <CreateYourPlanButton />
+      <CreateYourPlanButton
+        backgroundColor="#0e8784"
+        onClick={() => navigate("/create-your-plan")}
+        marginTop="56px"
+        buttonText="Create your plan"
+      />
     </div>
   );
 };

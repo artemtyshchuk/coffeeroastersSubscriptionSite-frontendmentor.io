@@ -1,15 +1,25 @@
-import { useNavigate } from "react-router";
 import styles from "./CreateYourPlanButton.module.scss";
-export const CreateYourPlanButton = () => {
-  const navigate = useNavigate();
 
+interface CreateYourPlanButtonProps {
+  backgroundColor: string;
+  onClick: () => void;
+  marginTop?: string;
+  buttonText: string;
+}
+export const CreateYourPlanButton = ({
+  backgroundColor,
+  onClick,
+  marginTop,
+  buttonText,
+}: CreateYourPlanButtonProps) => {
   return (
     <>
       <button
         className={styles.createYourPlanButton}
-        onClick={() => navigate("/create-your-plan")}
+        onClick={onClick}
+        style={{ backgroundColor: backgroundColor, marginTop: marginTop }}
       >
-        Create your plan
+        {buttonText}
       </button>
     </>
   );

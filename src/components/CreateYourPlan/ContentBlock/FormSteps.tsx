@@ -20,7 +20,10 @@ export const FormSteps = ({
       className={`${styles.formStep} ${isActive ? styles.activeFormStep : ""}`}
       onClick={onClick}
     >
-      <p className={styles.formStepTitle}>
+      <p
+        className={styles.formStepTitle}
+        style={{ color: isActive ? "#83888F" : "" }}
+      >
         <span className={styles.formStepNumber}>{number}</span> {title}
       </p>
       {divider && <span className={styles.formStepDivider} />}
