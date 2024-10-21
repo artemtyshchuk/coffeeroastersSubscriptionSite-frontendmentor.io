@@ -205,6 +205,7 @@
 }
 
 .formOptionBoxTitle {
+  padding-bottom: 24px;
   margin: 0;
   color: #333d4b;
   font-family: "Fraunces";
@@ -215,7 +216,6 @@
 }
 
 .formOptionBoxDescr {
-  padding-top: 24px;
   margin: 0;
   color: #333d4b;
   font-family: Barlow;
@@ -223,6 +223,12 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .orderSummaryContainer {

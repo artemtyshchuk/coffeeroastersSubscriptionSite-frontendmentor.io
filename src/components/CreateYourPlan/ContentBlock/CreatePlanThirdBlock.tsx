@@ -122,3 +122,27 @@ export const CreatePlanThirdBlock = () => {
     </div>
   );
 };
+
+//npm install firebase
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCf6vlYRTY9nKAQUB6OZCPVwZoV6oxU2AI",
+//   authDomain: "coffeeroaster-25964.firebaseapp.com",
+//   projectId: "coffeeroaster-25964",
+//   storageBucket: "coffeeroaster-25964.appspot.com",
+//   messagingSenderId: "773568759949",
+//   appId: "1:773568759949:web:759d148d20b520e43fbac4",
+//   measurementId: "G-J6YTDK714D"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);

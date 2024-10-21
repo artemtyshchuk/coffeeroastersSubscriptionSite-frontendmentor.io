@@ -1,6 +1,7 @@
 import { ReactComponent as CloseArrowIcon } from "assets/plan/desktop/icon-arrow.svg";
 import { ReactComponent as OpenArrowIcon } from "assets/plan/desktop/OpenArrow.svg";
 import styles from "../CreateYourPlan.module.scss";
+import { useState } from "react";
 
 interface FormOptionsProps {
   formQuestions: string;
@@ -15,6 +16,8 @@ export const FormOptions = ({
   id,
   handleOpen,
 }: FormOptionsProps) => {
+  const [selectedOption, setSelectedOption] = useState<string>("");
+
   return (
     <div className={styles.formOptionsContainer} id={id}>
       <button className={styles.formOption} onClick={handleOpen}>
@@ -29,26 +32,87 @@ export const FormOptions = ({
       </button>
 
       {isOpen && (
-        <div className={styles.formOptionBoxes}>
-          <div className={styles.formOptionBox}>
-            <p className={styles.formOptionBoxTitle}>Capsule</p>
-            <p className={styles.formOptionBoxDescr}>
+        <form className={styles.formOptionBoxes}>
+          <label
+            className={styles.formOptionBoxDescr}
+            style={{ color: selectedOption === "Capsule" ? "white" : "" }}
+          >
+            <div
+              className={styles.formOptionBox}
+              style={{
+                backgroundColor: selectedOption === "Capsule" ? "#0E8784" : "",
+              }}
+            >
+              <p
+                className={styles.formOptionBoxTitle}
+                style={{ color: selectedOption === "Capsule" ? "white" : "" }}
+              >
+                Capsule
+              </p>
+              <input
+                name="HowDoYouDrinkYourCoffee"
+                type="radio"
+                value="Capsule"
+                checked={selectedOption === "Capsule"}
+                onChange={() => setSelectedOption("Capsule")}
+              />
               Compatible with Nespresso systems and similar brewers
-            </p>
-          </div>
-          <div className={styles.formOptionBox}>
-            <p className={styles.formOptionBoxTitle}>Filter</p>
-            <p className={styles.formOptionBoxDescr}>
+            </div>
+          </label>
+
+          <label
+            className={styles.formOptionBoxDescr}
+            style={{ color: selectedOption === "Filter" ? "white" : "" }}
+          >
+            <div
+              className={styles.formOptionBox}
+              style={{
+                backgroundColor: selectedOption === "Filter" ? "#0E8784" : "",
+              }}
+            >
+              <p
+                className={styles.formOptionBoxTitle}
+                style={{ color: selectedOption === "Filter" ? "white" : "" }}
+              >
+                Filter
+              </p>
+              <input
+                name="HowDoYouDrinkYourCoffee"
+                type="radio"
+                value="Filter"
+                checked={selectedOption === "Filter"}
+                onChange={() => setSelectedOption("Filter")}
+              />
               For pour over or drip methods like Aeropress, Chemex, and V60
-            </p>
-          </div>
-          <div className={styles.formOptionBox}>
-            <p className={styles.formOptionBoxTitle}>Espresso</p>
-            <p className={styles.formOptionBoxDescr}>
+            </div>
+          </label>
+          <label
+            className={styles.formOptionBoxDescr}
+            style={{ color: selectedOption === "Espresso" ? "white" : "" }}
+          >
+            <div
+              className={styles.formOptionBox}
+              style={{
+                backgroundColor: selectedOption === "Espresso" ? "#0E8784" : "",
+              }}
+            >
+              <p
+                className={styles.formOptionBoxTitle}
+                style={{ color: selectedOption === "Espresso" ? "white" : "" }}
+              >
+                Espresso
+              </p>
+              <input
+                name="HowDoYouDrinkYourCoffee"
+                type="radio"
+                value="Espresso"
+                checked={selectedOption === "Espresso"}
+                onChange={() => setSelectedOption("Espresso")}
+              />
               Dense and finely ground beans for an intense, flavorful experience
-            </p>
-          </div>
-        </div>
+            </div>
+          </label>
+        </form>
       )}
     </div>
   );
