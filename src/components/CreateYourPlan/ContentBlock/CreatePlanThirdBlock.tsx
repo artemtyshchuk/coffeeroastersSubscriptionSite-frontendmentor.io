@@ -36,6 +36,14 @@ export const CreatePlanThirdBlock = () => {
     setOpenQuestions((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
+  const resetForm = () => {
+    setPreference("");
+    setBeanType("");
+    setQuantity("");
+    setGrindOption("");
+    setDelivery("");
+  };
+
   return (
     <div className={styles.thirdBlock}>
       <div className={styles.formSteps}>
@@ -155,14 +163,31 @@ export const CreatePlanThirdBlock = () => {
 
       <div className={styles.createYourPlanButton}>
         <CreateYourPlanButton
-          backgroundColor="#E2DEDB"
+          backgroundColor={
+            !preference || !beanType || !quantity || !grindOption || !delivery
+              ? "#E2DEDB"
+              : "#0e8784"
+          }
           onClick={() => setModalOpen(true)}
           marginTop="40px"
           buttonText="Create My Plan!"
+          disabled={
+            !preference || !beanType || !quantity || !grindOption || !delivery
+          }
         />
       </div>
 
-      {modalOpen && <ModalCheckout />}
+      {modalOpen && (
+        <ModalCheckout
+          preference={preference}
+          beanType={beanType}
+          quantity={quantity}
+          grindOption={grindOption}
+          delivery={delivery}
+          closeModal={() => setModalOpen(false)}
+          resetForm={resetForm}
+        />
+      )}
     </div>
   );
 };
