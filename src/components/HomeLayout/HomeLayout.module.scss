@@ -1,6 +1,6 @@
 .firstContainer {
   display: grid;
-  grid-template-columns: 35% 1fr;
+  grid-template-columns: 40% 1fr;
   padding: 100px 86px;
   width: 100%;
   height: 100%;
@@ -14,7 +14,7 @@
 .firstBlockTitle {
   margin: 0;
   color: #fefcf7;
-  font-family: "Fraunces 9pt";
+  font-family: "Fraunces";
   font-size: 72px;
   font-style: normal;
   font-weight: 900;
@@ -48,8 +48,8 @@
   margin: 0;
   background: linear-gradient(
     180deg,
-    rgba(131, 136, 143, 1) 10%,
-    rgba(131, 136, 143, 0) 87%
+    rgba(131, 136, 143, 1) 90%,
+    rgba(131, 136, 143, 0) 17%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -69,7 +69,7 @@
   bottom: 73px;
   display: grid;
   grid-template-columns: repeat(4, 24%);
-  column-gap: 30px;
+  justify-content: space-between;
   box-sizing: border-box;
 }
 
@@ -87,7 +87,7 @@
   margin-top: 10%;
   color: #333d4b;
   text-align: center;
-  font-family: "Fraunces 9pt";
+  font-family: "Fraunces";
   font-size: 24px;
   font-style: normal;
   font-weight: 900;
@@ -272,4 +272,104 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+@media (max-width: 1439px) {
+  //1201
+  .firstContainer {
+    grid-template-columns: 50% 1fr;
+  }
+
+  .secondContainer {
+    margin-top: 6%;
+  }
+}
+
+@media (max-width: 1200px) {
+  //993
+  .firstContainer {
+    grid-template-columns: 65% 1fr;
+  }
+
+  .secondContainer {
+    margin-top: 4%;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+  .firstContainer {
+    grid-template-columns: 90% 1fr;
+    background-image: url("../../assets/home/tablet/image-hero-coffeepress.jpg");
+  }
+  .secondBlockTitle {
+    font-size: 104px;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+  .firstContainer {
+    grid-template-columns: 90% 1fr;
+  }
+
+  .firstBlockTitle {
+    font-size: 56px;
+  }
+
+  .secondBlockTitle {
+    font-size: 79px;
+  }
+
+  .coffeTitle {
+    margin-top: 0;
+    font-size: 17px;
+  }
+
+  .coffeDescr {
+    padding-top: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstContainer {
+    grid-template-columns: 1fr;
+    padding: 80px 20px;
+    background-image: url("../../assets/home/mobile/image-hero-coffeepress.jpg");
+  }
+
+  .firstBlockTitle {
+    font-size: 39px;
+    line-height: 41px; /* 100% */
+  }
+
+  .secondBlockTitle {
+    background: linear-gradient(
+      180deg,
+      rgba(131, 136, 143, 1) 21%,
+      rgba(131, 136, 143, 0) 90%
+    );
+    font-size: 38px;
+    letter-spacing: 0;
+    word-spacing: 5px;
+    background-clip: text;
+  }
+
+  .coffeCollectionContainer {
+    padding: 20px 50px;
+    position: relative;
+    top: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+
+  .coffeDescr {
+    padding-top: 7px;
+    font-size: 14px;
+    line-height: 20px; /* 162.5% */
+  }
 }

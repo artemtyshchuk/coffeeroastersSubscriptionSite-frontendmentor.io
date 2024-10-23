@@ -12,8 +12,8 @@ export const HomeLayout = ({}: HomeLayoutProps) => {
     <div className={styles.homeLayout}>
       <HomeFirstBlock />
       <HomeSecondBlock />
-      <HomeThirdBlock />
-      <HomeFourthBlock />
+      {/* <HomeThirdBlock />
+      <HomeFourthBlock /> */}
     </div>
   );
 };
