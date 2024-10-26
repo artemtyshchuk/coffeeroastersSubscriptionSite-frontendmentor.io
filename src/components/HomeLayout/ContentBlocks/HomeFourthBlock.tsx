@@ -18,10 +18,7 @@ export const HomeFourthBlock = () => {
       <div className={styles.stepsContainer}>
         <div className={styles.step}>
           <p className={styles.stepNumber}>01</p>
-          <p className={styles.stepTitle}>
-            Pick your <br />
-            coffee
-          </p>
+          <p className={styles.stepTitle}>Pick your coffee</p>
           <p className={styles.stepDescr}>
             Select from our evolving range of artisan coffees. Our beans are
             ethically sourced and we pay fair prices for them. There are new
@@ -49,12 +46,14 @@ export const HomeFourthBlock = () => {
           </p>
         </div>
       </div>
-      <CreateYourPlanButton
-        backgroundColor="#0e8784"
-        onClick={() => navigate("/create-your-plan")}
-        marginTop="56px"
-        buttonText="Create your plan"
-      />
+      <div className={styles.buttonContainer}>
+        <CreateYourPlanButton
+          backgroundColor="#0e8784"
+          onClick={() => navigate("/create-your-plan")}
+          marginTop="56px"
+          buttonText="Create your plan"
+        />
+      </div>
     </div>
   );
 };

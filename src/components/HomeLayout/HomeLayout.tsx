@@ -5,15 +5,13 @@ import { HomeSecondBlock } from "./ContentBlocks/HomeSecondBlock";
 import { HomeThirdBlock } from "./ContentBlocks/HomeThirdBlock";
 import { HomeFourthBlock } from "./ContentBlocks/HomeFourthBlock";
 
-interface HomeLayoutProps {}
-
-export const HomeLayout = ({}: HomeLayoutProps) => {
+export const HomeLayout = () => {
   return (
     <div className={styles.homeLayout}>
       <HomeFirstBlock />
       <HomeSecondBlock />
-      {/* <HomeThirdBlock />
-      <HomeFourthBlock /> */}
+      <HomeThirdBlock />
+      <HomeFourthBlock />
     </div>
   );
 };
