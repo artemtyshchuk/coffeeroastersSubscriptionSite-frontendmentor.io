@@ -53,9 +53,6 @@
   background-repeat: no-repeat;
   background-size: contain;
   box-sizing: border-box;
-}
-
-.masterImage {
   border-radius: 10px;
 }
 
@@ -94,7 +91,7 @@
 .thirdBlockTitle {
   margin: 0;
   color: #fefcf7;
-  font-family: "Fraunces 9pt";
+  font-family: "Fraunces";
   font-size: 40px;
   font-style: normal;
   font-weight: 900;
@@ -169,4 +166,215 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+
+@media (max-width: 1439px) {
+  //1201
+
+  .thirdBlock {
+    column-gap: 43px;
+  }
+
+  .cupImage {
+    height: 93%;
+    right: 56px;
+  }
+}
+
+@media (max-width: 1200px) {
+  //993
+
+  .firstBlock {
+    grid-template-columns: 42% 1fr;
+    background-image: url("../../assets/about/tablet/image-hero-whitecup.jpg");
+  }
+
+  .secondBlock {
+    margin-top: 5%;
+    padding: 0;
+    grid-template-columns: 45% 1fr;
+    column-gap: 55px;
+  }
+
+  .imageContainer {
+    justify-content: flex-end;
+    height: 80%;
+  }
+
+  .thirdBlock {
+    margin-top: 10%;
+    padding: 60px 45px;
+    column-gap: 52px;
+  }
+
+  .cupImage {
+    height: 80%;
+    bottom: 30%;
+    right: 56px;
+    padding-bottom: 0;
+  }
+
+  .thirdBlockDescr {
+    padding-bottom: 37px;
+  }
+
+  .fourthBlock {
+    margin: 7% 85px 0 85px;
+  }
+
+  .countryname {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+
+  .firstBlock {
+    width: 100%;
+
+    grid-template-columns: 70% 1fr;
+    background-image: url("../../assets/about/tablet/image-hero-whitecup.jpg");
+    background-size: cover;
+  }
+
+  .secondBlock {
+    margin-top: 5%;
+    padding: 0;
+    grid-template-columns: 45% 1fr;
+    column-gap: 55px;
+    align-items: start;
+  }
+
+  .imageContainer {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .secondBlockTitle {
+    font-size: 32px;
+  }
+
+  .thirdBlock {
+    margin-top: 40%;
+    padding: 155px 45px 45px 45px;
+    column-gap: 52px;
+    grid-template-columns: 1fr;
+  }
+
+  .cupImage {
+    height: 75%;
+    width: 90%;
+    bottom: 80%;
+    right: 5%;
+    padding-bottom: 0px;
+    object-position: center bottom;
+  }
+
+  .fourthBlock {
+    margin: 7% 45px 0 45px;
+  }
+
+  .countryImageContainer {
+    display: flex;
+    justify-self: center;
+  }
+
+  .countryname {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .countryDescr {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+
+  .firstBlock {
+    grid-template-columns: 1fr;
+    background-image: url("../../assets/about/mobile/image-hero-whitecup.jpg");
+    text-align: center;
+  }
+
+  .imageContainer {
+    justify-content: center;
+    height: 80%;
+  }
+
+  .secondBlock {
+    margin-top: 5%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    column-gap: 55px;
+  }
+
+  .secondBlockTitle {
+    padding-top: 32px;
+    text-align: center;
+  }
+
+  .secondBlockDescr {
+    padding-top: 24px;
+    text-align: center;
+  }
+
+  .thirdBlock {
+    margin-top: 60%;
+    text-align: center;
+  }
+
+  .fourthBlock {
+    margin: 7% 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstBlock {
+    padding: 137px 24px;
+  }
+
+  .thirdBlock {
+    box-sizing: border-box;
+  }
+
+  .countryCards {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+  }
+
+  .thirdBlockTitle {
+    font-size: 23px;
+    line-height: 32px; /* 120% */
+  }
+
+  .thirdBlock {
+    padding: 155px 24px 48px 24px;
+    margin-top: 134%;
+    text-align: center;
+  }
+
+  .fourthBlockTitle {
+    text-align: center;
+  }
+
+  .countryContainer {
+    margin-top: 48px;
+  }
+
+  .countryname {
+    padding-top: 24px;
+  }
+
+  .countryDescr {
+    padding-top: 16px;
+  }
 }

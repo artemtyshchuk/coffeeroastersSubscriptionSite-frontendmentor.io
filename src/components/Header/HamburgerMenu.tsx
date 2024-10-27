@@ -1,10 +1,28 @@
+import { useNavigate } from "react-router";
 import styles from "./Header.module.scss";
 export const HamburgerMenu = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.hamburgerMenu}>
-      <button className={styles.hamburgerMenuButton}>Home</button>
-      <button className={styles.hamburgerMenuButton}>About us</button>
-      <button className={styles.hamburgerMenuButton}>Create your plan</button>
+      <button
+        className={styles.hamburgerMenuButton}
+        onClick={() => navigate("/")}
+      >
+        Home
+      </button>
+      <button
+        className={styles.hamburgerMenuButton}
+        onClick={() => navigate("/about-us")}
+      >
+        About us
+      </button>
+      <button
+        className={styles.hamburgerMenuButton}
+        onClick={() => navigate("/create-your-plan")}
+      >
+        Create your plan
+      </button>
     </div>
   );
 };
