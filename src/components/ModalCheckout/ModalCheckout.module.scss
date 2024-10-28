@@ -41,9 +41,11 @@
 }
 
 .modalContentContainer {
+  display: grid;
   padding: 43px 56px 51px 56px;
   background-color: #fff;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 .modalContent {
@@ -97,7 +99,7 @@
 
 .modalEdit {
   display: flex;
-  justify-self: end;
+  justify-self: flex-end;
   align-items: center;
   background-color: transparent;
   border: none;
@@ -124,14 +126,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 92%;
     background-color: #fefcf7;
     border-radius: 8px;
   }
 
   .modalHeaderContainer {
     padding: 24px 28px;
-    width: 300px;
+    width: 100%;
   }
 
   .modalHeader {
@@ -139,9 +141,8 @@
   }
 
   .modalContentContainer {
-    width: 300px;
+    width: 100%;
     padding: 24px;
-    box-sizing: border-box;
   }
 
   .modalFooter {

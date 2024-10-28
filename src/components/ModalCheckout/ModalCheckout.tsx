@@ -86,7 +86,7 @@ export const ModalCheckout = ({
         <div className={styles.modalContentContainer}>
           <button className={styles.modalEdit} onClick={() => closeModal()}>
             <EditIcon className={styles.modalEditIcon} />
-            Edit
+            Close to Edit
           </button>
           <OrderSummary
             preference={preference}
