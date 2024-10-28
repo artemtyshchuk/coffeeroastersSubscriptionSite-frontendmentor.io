@@ -273,9 +273,14 @@
     margin: 7% 45px 0 45px;
   }
 
+  .countryCards {
+    display: flex;
+    justify-items: center;
+  }
+
   .countryImageContainer {
     display: flex;
-    justify-self: center;
+    justify-content: center;
   }
 
   .countryname {
