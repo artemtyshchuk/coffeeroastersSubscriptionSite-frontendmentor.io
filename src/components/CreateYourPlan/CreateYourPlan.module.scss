@@ -1,6 +1,3 @@
-.createYourPlan {
-}
-
 .firstBlock {
   padding: 137px 85px;
   display: grid;
@@ -37,6 +34,7 @@
 }
 
 .stepsContainer {
+  margin-top: 67px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 95px;
@@ -61,7 +59,6 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  // background-color: transparent;
   border: 2px solid #0e8784;
   z-index: 100;
 }
@@ -74,10 +71,6 @@
   height: 2px;
   background-color: #fdd6ba;
   z-index: 1;
-}
-
-.stepsContainer {
-  margin-top: 67px;
 }
 
 .stepNumber {
@@ -229,6 +222,7 @@ input[type="radio"] {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  display: none;
 }
 
 .orderSummaryContainer {
@@ -266,4 +260,237 @@ input[type="radio"] {
   display: flex;
   justify-content: end;
   grid-column: 2/3;
+}
+
+@media (max-width: 1439px) {
+  //1201
+  .firstBlock {
+    grid-template-columns: 50% 1fr;
+  }
+
+  .lineContainer {
+    width: 78%;
+  }
+
+  .line {
+    left: 13.6%;
+    width: 56%;
+  }
+
+  .thirdBlock {
+    padding: 10% 85px;
+    display: grid;
+    grid-template-columns: 27% 1fr;
+    column-gap: 85px;
+  }
+
+  .formOptionsTitle {
+    font-size: 33px;
+  }
+
+  .formOptionBoxes {
+    column-gap: 18px;
+  }
+
+  .formOptionBox {
+    padding: 32px 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  //993
+
+  .firstBlock {
+    grid-template-columns: 60% 1fr;
+  }
+
+  .lineContainer {
+    width: 75%;
+  }
+
+  .line {
+    left: 11.4%;
+    width: 57%;
+  }
+
+  .secondBlock {
+    margin-top: 10%;
+    padding: 80px 45px;
+    background-color: #2c343e;
+    border-radius: 10px;
+  }
+
+  .stepsContainer {
+    margin-top: 67px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+  }
+
+  .thirdBlock {
+    padding: 10% 38px;
+    column-gap: 50px;
+    grid-template-columns: 27% 1fr;
+  }
+
+  .formStepNumber {
+    margin-right: 11px;
+  }
+
+  .formStepTitle {
+    font-size: 21px;
+  }
+
+  .formOptionsTitle {
+    font-size: 29px;
+  }
+
+  .orderSummaryContainer {
+    margin-top: 62px;
+    padding: 34px;
+  }
+
+  .orderSummaryDescr {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  //769
+
+  .firstBlock {
+    grid-template-columns: 1fr;
+    background-image: url("../../assets/plan/tablet/image-hero-blackcup.jpg");
+  }
+
+  .lineContainer {
+    width: 78%;
+  }
+
+  .line {
+    left: 13%;
+    width: 57%;
+  }
+
+  .stepTitle {
+    font-size: 28px;
+  }
+
+  .formSteps {
+    display: none;
+  }
+
+  .thirdBlock {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  //577
+
+  .firstBlock {
+    padding: 137px 45px;
+    grid-template-columns: 1fr;
+    background-image: url("../../assets/plan/mobile/image-hero-blackcup.jpg");
+  }
+
+  .lineContainer {
+    display: none;
+  }
+
+  .stepsContainer {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 56px;
+  }
+
+  .stepTitle {
+    padding-top: 24px;
+  }
+
+  .stepDescr {
+    padding-top: 24px;
+  }
+
+  .formOptionsTitle {
+    font-size: 24px;
+  }
+
+  .orderSummaryDescr {
+    font-size: 20px;
+  }
+
+  .formOptionBoxes {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  .formOptionBox {
+    text-align: center;
+    height: auto;
+  }
+
+  .formOptionBoxTitle {
+    padding-bottom: 8px;
+  }
+
+  .formOptionsContainer {
+    gap: 38px;
+  }
+}
+
+@media (max-width: 576px) {
+  .firstBlock {
+    padding: 101px 24px;
+  }
+
+  .firstBlockTitle {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .firstBlockDescr {
+    padding-top: 22px;
+    text-align: center;
+  }
+
+  .secondBlock {
+    padding: 69px 24px;
+  }
+
+  .thirdBlock {
+    padding: 10% 18px;
+  }
+
+  .formOption {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 8%;
+    gap: 24px;
+  }
+
+  .formOptionsTitle {
+    text-align: start;
+    line-height: 30px;
+  }
+
+  .orderSummaryContainer {
+    margin-top: 31px;
+    padding: 24px;
+  }
+
+  .orderSummaryDescr {
+    font-size: 17px;
+    line-height: 28px; /* 166.667% */
+  }
+
+  .createYourPlanButton {
+    display: flex;
+    justify-content: center;
+  }
 }

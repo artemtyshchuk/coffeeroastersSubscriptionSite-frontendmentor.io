@@ -5,7 +5,6 @@
   padding: 44px 0;
 }
 
-
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -38,7 +37,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   //577
 
@@ -55,7 +53,7 @@
     left: 0;
     background: linear-gradient(
       to bottom,
-      #fff 0%,
+      #fff 30%,
       rgba(255, 255, 255, 0) 100%
     );
 
@@ -79,4 +77,3 @@
     line-height: 32px; /* 133.333% */
   }
 }
-

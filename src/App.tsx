@@ -1,3 +1,4 @@
+import { ScrollToTopButton } from "components/Buttons/ScrollToTopButton/ScrollToTopButton";
 import { Container } from "components/Container";
 import { Footer } from "components/Footer";
 import { Header } from "components/Header";
@@ -15,6 +16,7 @@ function App() {
           <Container>
             <Header />
             <Outlet />
+            <ScrollToTopButton />
           </Container>
           <Footer />
         </>

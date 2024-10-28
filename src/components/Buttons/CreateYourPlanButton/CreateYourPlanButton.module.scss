@@ -28,3 +28,9 @@
     background: #0e8784;
   }
 }
+
+@media (max-width: 576px) {
+  .createYourPlanButton {
+    font-size: 17px;
+  }
+}

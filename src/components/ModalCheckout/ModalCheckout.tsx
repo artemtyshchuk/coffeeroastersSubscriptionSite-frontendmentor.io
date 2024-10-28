@@ -7,6 +7,8 @@ import failedAnimation from "assets/Animation - 1729615749304.json";
 import successAnimation from "assets/Animation - 1729614731993.json";
 import Lottie from "lottie-react";
 import { useState } from "react";
+import { useScreenSize } from "hooks/useScreenSize";
+import { ReactComponent as EditIcon } from "assets/editIcon.svg";
 
 interface ModalCheckoutProps {
   preference: string;
@@ -25,9 +27,12 @@ export const ModalCheckout = ({
   grindOption,
   delivery,
   closeModal,
-  resetForm
+  resetForm,
 }: ModalCheckoutProps) => {
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false); 
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+
+  const { smallScreen } = useScreenSize();
+
   const calculatePrice = () => {
     if (delivery === "Every week") {
       return "14.00";
@@ -55,7 +60,7 @@ export const ModalCheckout = ({
 
     setTimeout(() => {
       closeModal();
-      resetForm()
+      resetForm();
     }, 3000);
   };
 
@@ -77,7 +82,12 @@ export const ModalCheckout = ({
         <div className={styles.modalHeaderContainer}>
           <p className={styles.modalHeader}>Order Summary</p>
         </div>
+
         <div className={styles.modalContentContainer}>
+          <button className={styles.modalEdit} onClick={() => closeModal()}>
+            <EditIcon className={styles.modalEditIcon} />
+            Edit
+          </button>
           <OrderSummary
             preference={preference}
             beanType={beanType}
@@ -86,22 +96,28 @@ export const ModalCheckout = ({
             delivery={delivery}
             textColor="#83888F"
           />
+
           <p className={styles.modalDescr}>
             Is this correct? You can proceed to checkout or go back to plan
             selection if something is off. Subscription discount codes can also
             be redeemed at the checkout.{" "}
           </p>
           <div className={styles.modalFooter}>
-            <div>
-              <p className={styles.finalPrice}>${calculatePrice()}/ mo</p>
-            </div>
+            {!smallScreen.mobileScreen && (
+              <>
+                <p className={styles.finalPrice}>${calculatePrice()}/ mo</p>
+              </>
+            )}
             <div>
               <CreateYourPlanButton
                 backgroundColor="#0e8784"
-                buttonText="Checkout"
+                buttonText={
+                  smallScreen.mobileScreen
+                    ? `Checkout - $${calculatePrice()}/mo`
+                    : "Checkout"
+                }
                 onClick={onSubmit}
                 disabled={isButtonDisabled}
-                
               />
             </div>
           </div>

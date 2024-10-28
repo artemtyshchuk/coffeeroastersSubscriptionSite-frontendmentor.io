@@ -1,0 +1,18 @@
+.ScrollToTopButton {
+  position: fixed;
+  bottom: 15%;
+  right: 6%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: rgb(14, 135, 132);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+.arrowIcon {
+  width: 48px;
+  height: 48px;
+}

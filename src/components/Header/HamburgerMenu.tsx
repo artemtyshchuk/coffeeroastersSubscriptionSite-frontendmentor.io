@@ -1,25 +1,39 @@
 import { useNavigate } from "react-router";
 import styles from "./Header.module.scss";
-export const HamburgerMenu = () => {
+
+interface HamburgerMenuProps {
+  closeMenu: () => void;
+}
+
+export const HamburgerMenu = ({ closeMenu }: HamburgerMenuProps) => {
   const navigate = useNavigate();
 
   return (
     <div className={styles.hamburgerMenu}>
       <button
         className={styles.hamburgerMenuButton}
-        onClick={() => navigate("/")}
+        onClick={() => {
+          navigate("/");
+          closeMenu();
+        }}
       >
         Home
       </button>
       <button
         className={styles.hamburgerMenuButton}
-        onClick={() => navigate("/about-us")}
+        onClick={() => {
+          navigate("/about-us");
+          closeMenu();
+        }}
       >
         About us
       </button>
       <button
         className={styles.hamburgerMenuButton}
-        onClick={() => navigate("/create-your-plan")}
+        onClick={() => {
+          navigate("/create-your-plan");
+          closeMenu();
+        }}
       >
         Create your plan
       </button>

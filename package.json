@@ -11,6 +11,7 @@
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
     "firebase": "^11.0.0",
+    "framer-motion": "^11.11.10",
     "generate-react-cli": "^8.4.8",
     "lottie-react": "^2.4.0",
     "react": "^18.3.1",
